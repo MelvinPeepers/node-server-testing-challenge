@@ -1,3 +1,4 @@
+const request = require("supertest");
 const Avengers = require("./avengers-Model.js");
 
 const db = require("../database/dbConfig.js");

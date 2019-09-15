@@ -8,10 +8,10 @@ module.exports = {
   findById
 };
 
-// this should resolve to the new hobbit
-async function insert(hobbit) {
+// this should resolve to the new avenger
+async function insert(avenger) {
   return db("avengers")
-    .insert(hobbit)
+    .insert(avenger)
     .then(ids => {
       return db("avengers")
         .where({ id: ids[0] })

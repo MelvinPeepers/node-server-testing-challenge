@@ -10,8 +10,8 @@ describe("the server", () => {
   });
 
   describe("GET /", () => {
-    xit("should run the testing env", () => {
-      expect(process.env.DB_ENV.toBe("testing"));
+    it("should run the testing env", () => {
+      expect(process.env.DB_ENV).toBe("testing");
     });
 
     it("should return status 200", () => {
