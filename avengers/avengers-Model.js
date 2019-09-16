@@ -20,11 +20,18 @@ async function insert(avenger) {
 }
 
 async function update(id, changes) {
-  return null;
+  return db("avengers")
+    .where({ id })
+    .update(changes)
+    .then(count => {
+      return findById(id);
+    });
 }
 
 function remove(id) {
-  return null;
+  return db("avengers")
+    .where({ id })
+    .del();
 }
 
 function getAll() {
@@ -32,5 +39,7 @@ function getAll() {
 }
 
 function findById(id) {
-  return null;
+  return db("avengers")
+    .where({ id })
+    .first();
 }
